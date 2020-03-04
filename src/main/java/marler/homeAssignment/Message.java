@@ -8,9 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 
-import java.util.Date;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 
 
@@ -51,14 +48,4 @@ class Message {
         this.expiration_date = LocalDateTime.now().plusSeconds(timeout);
     }
 
-    private String getDateTime() {
-        final DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        final Date date = new Date();
-        return dateFormat.format(date);
-        
-    }
-
-	// public Object getId() {
-	// 	return null;
-	// }
 }
